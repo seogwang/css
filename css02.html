@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자(Selecter)</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { width: : 1280px; }
+        a { text-decoration: none; }
+        .comment { font-weight: 800; }
+        #base { color: deepskyblue; }
+
+        .ex1 li { list-style : none; }
+        .ex > nav > .lst1 > li { padding-left: 24px; }
+        .ex1 .itme1 ~ li a { color: red; } /* 글자 색은 a 태그에 넣어야 됨*/
+        .ex1 .item1 + li a { boder:1px solid red; }
+        li:first-child a { color: blue; }
+        li:first-of-type { background-color: #999; }
+        li:last-child { border-bottom: 2px bouble #000; }
+        li:last-of-type { border-top: 3px dotted %#f70; }
+        li:nth-child(2) { border-left: 3px solid navy; }
+        li:nth-child(2) { border-right:4px dashed gold; }
+
+    </style>
+</head>
+<body>
+    <h2>선택자</h2>
+    <p class="comment">스타일을 부여할 대산을 지정하는 키워드</p>
+    <hr>
+    <h2>기본 선택자</h2>
+    <p class="comment">태그, 클래스, 아이디, 전체 선택자</p>
+    <code>
+        * { } : 모든 태그 <br> <!-- 모든 태그 -->
+        a { } : a 태그만 <br> <!-- 해당 태그 -->
+        .클래스명 { } <br> <!--태그에 해당 클래스 속성이 있는 요소만 선택-->
+        #아이디명 { } <br> <!-- 태그에 해당 아이디 속성이 있는 요소만 선택-->
+    </code>
+    <p>클래스(class) : 스타일이나 스크립트를 공통으로 적용시키기 위한 것</p>
+    <p>아이디(id) : 하나의 html 문서에서 각 각의 요소를 중복되지 않게 아이디를 부여하여
+        각 요소를 구분하여 스타일이나 스크립트를 각각 적용하기 위해 태그에 지정
+    </p>
+    <hr>
+    <h2>계층 선택자</h2>
+    <p class="comment">조상후손, 부모자식, 형제, 순서 선택자</p>
+    <code>
+        조상 후손 { } <br> <!--  조상 요소와 후손 요소 사이를 한 칸 띄움 -->
+        부모 &gt; 자식 { } <br> <!-- 부모 자식 요소 사이에 &gt; 가 붙음 -->
+        형 ~ 제 { } <br> <!-- 형과 아우 요소 사이에 ~ 가 붙음 // 동생들만 선택-->
+        형 + 바로 밑의 동생 { } <!-- 형과 바로 및의 동생 요소 사이에 +가 붙음
+            // 바로 밑의 동생 하나만 선택-->
+    </code>
+        
+    <code>
+
+    </code>
+    <div>
+    <input type="radio" name="ra" id="ra1">
+    <input type="radio" name="ra" id="ra2">
+    <input type="radio" name="ra" id="ra3">
+    </div>
+</body>
+</html>
