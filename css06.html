@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css속성 (properties) - 글자/문단 관련 속성</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'NanumBarunpen';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #area { width:1200px; margin: 20px auto; }
+        .f1 { color: #930; font-size:20pt; line-height: 2; 
+        font-weight: bold; }
+        .f1 span { font-weight: 200; color:deepskyblue; }
+        .f2 { font-stretch:extra-expanded; text-transform: uppercase;}
+        .f3 { text-transform: capitalize; font-variant: small-caps;}
+        .f4 { font-size: 20px; text-indent: 24px; font-style: oblique; 
+            font-family: 'Noto Sans KR', sans-serif; text-decoration: overline; 
+            letter-spacing: 8px;}
+        .f5 { font-size: 20px; text-indent: -24px; font-style: italic;
+            font-family: NanumBarunpen, cursive; text-decoration: line-through;
+            word-spacing: 20px; }
+        .f6 { text-decoration: underline; }
+        .f7 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .f8 { width: 120px; margin:40px auto; word-break: keep-all;} /* white-space 참고 */
+
+    </style>
+</head>
+<body>
+    <div id="area">
+        <p class="f1">서광1 서광1 <span>서광1</span> 우리나라 서광1 대한민국 서광1 korean seogwang korean seogwang</p>
+        <p class="f2">서광2 서광2 서광2 우리나라 서광2 대한민국 서광2 korean seogwang korean seogwang</p>
+        <p class="f3">서광3 서광3 서광3 우리나라 서광3 대한민국 서광3 korean seogwang korean seogwang</p>
+        <p class="f4">서광4 서광4 서광4 우리나라 서광4 대한민국 서광4 korean seogwang korean seogwang</p>
+        <p class="f5">서광5 서광5 서광5 우리나라 서광5 대한민국 서광5 korean seogwang korean seogwang</p>
+        <p class="f6">서광6 서광6 서광6 우리나라 서광6 대한민국 서광6 korean seogwang korean seogwang</p>
+        <p class="f7">서광7 서광7 서광7 우리나라 서광7 대한민국 서광7 korean seogwang korean seogwang서광7 서광7 서광7 우리나라 서광7 대한민국 서광7 korean seogwang korean seogwang서광7 서광7 서광7 우리나라 서광7 대한민국 서광7 korean seogwang korean seogwang</p>
+        <p class="f8">서광8 서광8 서광8 우리나라 서광8 대한민국 서광8 korean seogwang korean seogwang</p>
+        <p class="f9">서광9 서광9 서광9 우리나라 서광9 대한민국 서광9 korean seogwang korean seogwang</p>
+        <p class="f10">서광10 서광10 서광10 우리나라 서광10 대한민국 서광10 korean seogwang korean seogwang</p>
+    </div>
+    <div class="con">
+    <h1>글자/문단 관련 속성</h1>
+    <p>color, font-size, font-weight</p>
+
+    <h2>글꼴 지정</h2>
+    <p>font-family : 1차폰트[, 2차폰트][, 3차폰트]</p>
+    <p>서버에 설치되어 있는 폰트의 이름을 지정하며, 만약 폰트의 이름 중간에
+        공백이 있거나 아니면, 한글과 같은 영문이 아닌 경우는 반드시 인용부호인
+        ""나 ''로 감싸서 표기 해야 하며, 만약, 1차 폰트가 존재하지 않는 경우는
+        2차 폰트가 적용되고, 여기서 2차 폰트도 적용될 수 없다면 3차 폰트가
+        적용되게 된다. 다만, 3차 폰트가 적용되지 못하는 경우를 대비하여
+        3차 폰트는 브라우저에 기본적으로 제공하는 폰트를 지정하여야 함.
+    </p>
+    <p>브라우저 제공하는 기본 폰트는 해당 서버나 클라이언트에 설치가
+        되어 있지 않아도 자동 제공되는데, sans-serif(고딕계열),
+        serif(명조계열), cursive(궁서계열), monospace(장평이 같은 폰트),
+        fantasy(디자인계열) 등을 말함.
+    </p>
+    <h2>커서 위치의 자간</h2>
+    <p>font-kerning : auto | normal | none</p>
+
+    <br><hr><br>
+
+    <h2>자간</h2>
+    <p>letter-spacing : normal | length</p>
+    <p>length : px, em, pt 등의 단위를 주로 활용</p>
+    <p>해당 요소 안의 글자와 글자 사이의 간격</p>
+    <br><hr><br>
+
+    <h2>어간</h2>
+    <p>word-spacing : normal | length</p>
+    <p>length : px, em, pt 등의 단위를 주로 활용</p>
+    <p>단어와 단어 사이의 간격</p>
+    <br><hr><br>
+
+    <h2>행 높이</h2>
+    <p>line-height : normal | number | length</p>
+    <p>값으로 숫자만 기재할 경우는 현재 문단의 글자 크기의 배수가 되며,
+        숫자 뒤에 단위가 들어가는 경우는 해당하는 단위의 크기가 적용됨 </p>
+    <br><hr><br>
+
+    <h2>문단 정렬</h2>
+    <p>text-align : left | right | center | justify</p>
+    <p>문단의 가로 방향에 대한 정렬</p>
+    <br><hr><br>
+
+    <h2>들여쓰기/내어쓰기</h2>
+    <p>text-indent : length</p>
+    <p>length 단위 : px, %, pt 등</p>
+    <p>들여쓰기 : 다른 줄에 비해 첫 전째 줄이 더 들어가게 쓰는 것인지
+    text-indent: 20px;
+    </p>
+    <p>내어쓰기 : 다른 줄에 비해 첫 번째 줄이 더 나오게 쓰는 것
+    text-indent : -20px;
+    </p>    
+    <br><hr><br>
+
+    <h2>글자 장식</h2>
+    <p>text-decoration : none | underline | overline | line-through</p>
+    <p>글자의 위, 중간, 아래에 줄을 표시하도록 하는 속성</p>
+    <p>none을 제외한 다른 값은 중복해서 사용할 수 있음<br>
+        text-decoratin:overline underline <br>
+        text-decoratin:underline double #369, overline wave #c00;</p>
+        <h3>세부속성</h3>
+        <p>text-decoration-color : 줄의 색</p>
+        <p>text-decoration-line : 줄의 위치(underline/overline/line-through)</p>
+        <p>text-decoration-style : 줄의 종류(solid/wave/double/dotted/dashed/..)</p>
+    <br><hr><br>
+
+    <h2>배분정렬</h2>
+    <p>text-justify : auto | none | inter-caracter | inter-word </p>
+    <!-- 한글은 기본값 : none. 글자별, 단어별로 떨어지게 할 수 있다.-->
+    <p>단어 또는 글자 단위로 한 줄의 데이터를 분량을 똑같이 배분정렬할 수
+        있는 속성.</p>
+    <br><hr><br>
+
+    <h2>글자 진행 방향</h2>
+    <p>text-orientation : mixed | upright | sideways | sideways-right |
+        use-glyph-orientation</p>
+    <br><hr><br>
+
+    <h2>글자 흘러 넘침</h2>
+    <p>text-overflow : clip | ellipsis | 특정문자 </p>
+    <p>단, text-overflow는 overflow가 hidden 이며, white-space: norap인 경우에
+        유효하다.
+    </p>
+    <br><hr><br>
+
+    <h2>내용 보호/줄 끝 처리</h2>
+    <p>white-space : normal | nowrap | pre | pre-line | pre-wrap </p>
+    <p>하나의 단어가 한 줄에 입력되어야만 하기 때문에 그 때 한 줄에 단어가
+        배치가 되든지, 아니면, 영문배치문법을 무시 하고 단어의 끝을 어떻게
+        처리할지 정학는 속성
+    </p>
+    <br><hr><br>
+
+    <h2>단어 처리</h2>
+    <p>word-break : normal | break-all | keep-all | break-word </p> <!-- 영문처리시에 사용 -->
+    <p>한 줄 또는 한 문장 안에서의 단어의 끝 처리 부분을 어떻게 할지 </p>
+    <br><hr><br>
+
+
+    </div>
+</body>
+</html>
